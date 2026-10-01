@@ -40,12 +40,12 @@
 - Consumes: tidak ada
 - Produces: `DATABASE_URL=postgres://short:short@localhost:5432/shortdb`, `docker compose up -d db` jalan
 
-- [ ] **Step 1: Inisialisasi SvelteKit (asisten ketik + jelaskan)**
+- [x] **Step 1: Inisialisasi SvelteKit (asisten ketik + jelaskan)**
 
 Run: `bunx sv create . --template minimal --types ts --no-add-ons --no-install` (atau manual bila dir sudah isi), lalu `bun install`
 Expected: `bun run dev` membuka halaman default SvelteKit di `http://localhost:5173`
 
-- [ ] **Step 2: Buat docker-compose.yml untuk Postgres**
+- [x] **Step 2: Buat docker-compose.yml untuk Postgres**
 
 ```yaml
 services:
