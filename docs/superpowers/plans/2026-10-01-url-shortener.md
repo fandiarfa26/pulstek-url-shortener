@@ -103,7 +103,7 @@ export const urlsTable = pgTable("urls", {
 Run: `bunx drizzle-kit generate && bunx drizzle-kit migrate`
 Expected: tabel `urls` ada. Cek: `docker exec -it <db> psql -U short -d shortdb -c "\d urls"`
 
-- [ ] **Step 4: Verifikasi persist + commit**
+- [x] **Step 4: Verifikasi persist + commit**
 
 Run: `docker compose restart db` lalu ulang `\d urls`
 Expected: tabel tetap ada. Commit `feat: urls schema + migrate`.
