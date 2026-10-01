@@ -1,42 +1,45 @@
-# sv
+# pulstek-url-shortener
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+URL shortener mini (SvelteKit monolith) — belajar alur frontend → backend → database.
 
-## Creating a project
+Stack: Bun + TypeScript + SvelteKit + PostgreSQL (Docker) + Drizzle ORM.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Prasyarat
 
-```sh
-# create a new project
-npx sv create my-app
-```
+- Bun (>= 1.x)
+- Docker + Docker Compose
 
-To recreate this project with the same configuration:
+## Fresh setup
 
 ```sh
-# recreate this project
-npx sv@0.17.1 create --template minimal --types ts --no-install .
+# 1. Install deps
+bun install
+
+# 2. Siapkan env
+cp .env.example .env
+
+# 3. Nyalakan Postgres
+docker compose up -d db
+
+# 4. Migrate DB (mulai Task 1)
+bunx drizzle-kit migrate
+
+# 5. Jalanin dev
+bun run dev
 ```
 
-## Developing
+Buka `http://localhost:5173`.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Cek DB
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+docker compose ps
+docker exec pulstek-url-shortener-db-1 pg_isready -U short -d shortdb
 ```
 
-## Building
+## Kontrak API (target)
 
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- `POST /api/urls` → 201 / 400
+- `GET /api/urls` → 200 (terbaru dulu)
+- `DELETE /api/urls/:shortCode` → 200 / 404
+- `GET /:shortCode` → 302 / 404

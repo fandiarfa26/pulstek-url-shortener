@@ -66,7 +66,7 @@ volumes:
 Run: `docker compose up -d db && docker compose ps`
 Expected: `db` status Up. `pg_isready -h localhost -U short` OK.
 
-- [ ] **Step 4: Tulis README skeleton + commit**
+- [x] **Step 4: Tulis README skeleton + commit**
 
 Run: `cat README.md` berisi langkah fresh-setup. `git add -A && git commit -m "chore: setup sveltekit + postgres docker"` (atau `git init` dulu bila belum repo)
 Expected: README bisa diikuti dari nol.
