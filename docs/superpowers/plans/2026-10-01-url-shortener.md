@@ -61,7 +61,7 @@ volumes:
   shortdb-data:
 ```
 
-- [ ] **Step 3: Verifikasi DB hidup**
+- [x] **Step 3: Verifikasi DB hidup**
 
 Run: `docker compose up -d db && docker compose ps`
 Expected: `db` status Up. `pg_isready -h localhost -U short` OK.
