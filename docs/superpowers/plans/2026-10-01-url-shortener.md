@@ -81,7 +81,7 @@ Expected: README bisa diikuti dari nol.
 - Consumes: `DATABASE_URL` dari Task 0
 - Produces: `urlsTable { id, originalUrl, shortCode, createdAt }`, `export const db` dari `src/lib/server/db/index.ts`
 
-- [ ] **Step 1: Install deps (asisten ketik + jelaskan)**
+- [x] **Step 1: Install deps (asisten ketik + jelaskan)**
 
 Run: `bun add drizzle-orm postgres && bun add -d drizzle-kit`
 Expected: `package.json` berisi ketiganya.
