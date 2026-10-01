@@ -86,7 +86,7 @@ Expected: README bisa diikuti dari nol.
 Run: `bun add drizzle-orm postgres && bun add -d drizzle-kit`
 Expected: `package.json` berisi ketiganya.
 
-- [ ] **Step 2: Tulis schema sesuai spec**
+- [x] **Step 2: Tulis schema sesuai spec**
 
 ```ts
 // src/lib/server/db/schema.ts
