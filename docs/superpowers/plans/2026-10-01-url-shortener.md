@@ -98,7 +98,7 @@ export const urlsTable = pgTable("urls", {
 });
 ```
 
-- [ ] **Step 3: Generate + migrate**
+- [x] **Step 3: Generate + migrate**
 
 Run: `bunx drizzle-kit generate && bunx drizzle-kit migrate`
 Expected: tabel `urls` ada. Cek: `docker exec -it <db> psql -U short -d shortdb -c "\d urls"`
