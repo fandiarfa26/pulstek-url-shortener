@@ -18,6 +18,7 @@
 - Tidak ada data hardcode pengganti database.
 - Satu fase selesai + terverifikasi + dipahami user sebelum lanjut fase berikut.
 - Asisten mengetik kode, user memahami tiap step (tanya sampai paham, jangan lanjut kalau belum).
+- JANGAN commit tanpa izin eksplisit user. Tampilkan `git status` + `git diff` dulu untuk dipelajari.
 
 ## Review Focus
 
@@ -265,7 +266,8 @@ Expected: app jalan, checklist DoD 11 item lolos.
 
 ## Cara jalan (aturan belajar)
 
-1. Asisten kerjakan satu Task/Step → jelaskan apa + kenapa (file:line) → user konfirmasi paham → baru lanjut.
-2. User boleh minta breakdown lebih detail / analogi / contoh sebelum lanjut.
-3. Kalau belum paham, stop dan bahas dulu, jangan lanjut ke step berikut.
-4. Stretch goals (click count, custom code, expire) hanya setelah Task 6 lolos semua.
+1. Asisten kerjakan satu Task/Step → jelaskan apa + kenapa (file:line) → tampilkan `git status` / `git diff` → user pelajari dulu.
+2. JANGAN `git commit` otomatis. Commit hanya setelah user bilang "ok commit" / "lanjut".
+3. User boleh minta breakdown lebih detail / analogi / contoh sebelum lanjut.
+4. Kalau belum paham, stop dan bahas dulu, jangan lanjut ke step berikut.
+5. Stretch goals (click count, custom code, expire) hanya setelah Task 6 lolos semua.
