@@ -101,17 +101,17 @@ Yang penting keputusan teknisnya bisa kamu jelaskan.
 
 Case dianggap selesai jika:
 
-* [ ] User bisa membuat short URL dari URL valid.
-* [ ] `shortCode` setiap URL unik.
-* [ ] Data URL tersimpan dan tetap tersedia setelah aplikasi restart.
-* [ ] User bisa melihat daftar URL yang dibuat.
-* [ ] Membuka `/:shortCode` melakukan redirect ke URL yang benar.
-* [ ] Short code yang tidak ditemukan menghasilkan error yang sesuai.
-* [ ] User bisa menghapus short URL.
-* [ ] URL invalid ditolak dengan pesan error yang jelas.
-* [ ] API tidak hanya bergantung pada validasi frontend.
-* [ ] Tidak ada data penting yang di-hardcode untuk menggantikan database.
-* [ ] Project bisa dijalankan dari kondisi fresh setup sesuai dokumentasi yang kamu buat.
+* [x] User bisa membuat short URL dari URL valid.
+* [x] `shortCode` setiap URL unik.
+* [x] Data URL tersimpan dan tetap tersedia setelah aplikasi restart.
+* [x] User bisa melihat daftar URL yang dibuat.
+* [x] Membuka `/:shortCode` melakukan redirect ke URL yang benar.
+* [x] Short code yang tidak ditemukan menghasilkan error yang sesuai.
+* [x] User bisa menghapus short URL.
+* [x] URL invalid ditolak dengan pesan error yang jelas.
+* [x] API tidak hanya bergantung pada validasi frontend.
+* [x] Tidak ada data penting yang di-hardcode untuk menggantikan database.
+* [x] Project bisa dijalankan dari kondisi fresh setup sesuai dokumentasi yang kamu buat.
 
 ### Out of Scope
 
@@ -135,4 +135,3 @@ Jika core feature sudah benar-benar selesai:
 * Tambahkan custom `shortCode`.
 * Tambahkan expiration date.
 * Tambahkan endpoint API untuk mengambil statistik sederhana.
-
