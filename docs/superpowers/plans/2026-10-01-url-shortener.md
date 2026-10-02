@@ -158,16 +158,16 @@ Expected: `400` + pesan Indonesia jelas.
 - Consumes: `GET/POST /api/urls` dari Task 2
 - Produces: form input + tombol create + daftar + link pendek tampil
 
-- [ ] **Step 1: Tulis form + script fetch POST**
+- [x] **Step 1: Tulis form + script fetch POST**
 
 Minimal: `<input bind:value>`, `<button>`, `<p>{error}</p>`, `fetch("/api/urls")` onMount untuk list.
 
-- [ ] **Step 2: Verifikasi browser**
+- [x] **Step 2: Verifikasi browser**
 
 Buka `http://localhost:5173`, input `https://example.com/a`, klik create.
 Expected: short URL muncul di list tanpa reload manual.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 `feat: ui form + list urls`
 
