@@ -239,24 +239,24 @@ Expected: list konsisten setelah reload.
 - Consumes: semua task sebelumnya
 - Produces: DoD CASE.md semua centang
 
-- [ ] **Step 1: Tolak `ftp://`, `javascript:`, string kosong, spasi — server + client message sama jelas**
+- [x] **Step 1: Tolak `ftp://`, `javascript:`, string kosong, spasi — server + client message sama jelas**
 
 Run:
 `curl -X POST localhost:5173/api/urls -H 'Content-Type: application/json' -d '{"url":"ftp://x"}'`
 `curl -X POST localhost:5173/api/urls -H 'Content-Type: application/json' -d '{}'`
 Expected: keduanya `400` jelas, bukan 500.
 
-- [ ] **Step 2: Proof persist setelah restart**
+- [x] **Step 2: Proof persist setelah restart**
 
 Run: `docker compose restart db` → reload `/` + `curl GET /api/urls`
 Expected: data tetap ada.
 
-- [ ] **Step 3: Proof fresh-setup dari README**
+- [x] **Step 3: Proof fresh-setup dari README**
 
 Run di folder clone baru (atau hapus `node_modules` + `docker compose down -v` di branch test — hati-hati): `bun install && docker compose up -d db && bunx drizzle-kit migrate && bun run dev`
 Expected: app jalan, checklist DoD 11 item lolos.
 
-- [ ] **Step 4: Commit final**
+- [x] **Step 4: Commit final**
 
 `chore: hardening + docs DoD pass`
 
