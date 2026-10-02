@@ -48,22 +48,38 @@
 	}
 </script>
 
-<h1>Pemendek URL</h1>
+<main class="mx-auto max-w-xl px-4 py-10">
+	<h1 class="text-2xl font-bold">Pemendek URL</h1>
 
-<form onsubmit={create}>
-	<input bind:value={url} placeholder="https://example.com/artikel" />
-	<button type="submit">Create</button>
-</form>
+	<form onsubmit={create} class="mt-4 flex gap-2">
+		<input
+			bind:value={url}
+			placeholder="https://example.com/artikel"
+			class="flex-1 rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
+		/>
+		<button type="submit" class="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+			Create
+		</button>
+	</form>
 
-{#if error}
-	<p>{error}</p>
-{/if}
+	{#if error}
+		<p class="mt-2 text-sm text-red-600">{error}</p>
+	{/if}
 
-<ul>
-	{#each urls as u (u.id)}
-		<li>
-			<a href={u.shortUrl}>{u.shortUrl}</a> → {u.originalUrl}
-			<button onclick={() => remove(u.shortCode)}>Delete</button>
-		</li>
-	{/each}
-</ul>
+	<ul class="mt-6 space-y-2">
+		{#each urls as u (u.id)}
+			<li class="flex items-center justify-between gap-2 rounded border border-gray-200 p-3">
+				<span class="truncate">
+					<a href={u.shortUrl} class="font-medium text-blue-600 hover:underline">{u.shortUrl}</a>
+					<span class="block truncate text-sm text-gray-500">{u.originalUrl}</span>
+				</span>
+				<button
+					onclick={() => remove(u.shortCode)}
+					class="shrink-0 rounded border border-red-200 px-3 py-1 text-sm text-red-600 hover:bg-red-50"
+				>
+					Delete
+				</button>
+			</li>
+		{/each}
+	</ul>
+</main>
