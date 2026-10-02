@@ -6,8 +6,9 @@ SvelteKit monolith (Bun + TS). UI `src/routes/+page.svelte` fetch ke `+server.ts
 
 - Asisten yang mengetik kode, satu Task/Step dalam satu waktu.
 - Tiap step: jelaskan apa + kenapa dengan `path:line`, tampilkan `git status` + `git diff`.
-- Tiap step selesai: update checklist `- [x]` di `docs/superpowers/plans/2026-10-01-url-shortener.md` sebelum commit, biar user tidak manual checklist.
-- JANGAN `git commit` tanpa izin eksplisit ("ok commit"). Lanjut step berikut hanya setelah user paham.
+- Tiap step selesai: update checklist `- [x]` di `docs/superpowers/plans/2026-10-01-url-shortener.md` langsung (tanpa commit).
+- Commit hanya di step terakhir tiap task (yang ada `+ commit` di plan), dan tetap hanya dengan izin eksplisit ("ok commit").
+- Lanjut step berikut hanya setelah user paham.
 - Out of scope CASE.md: auth, QR, analytics, expiration, rate limiting, custom domain, deploy, UI kompleks.
 
 ## Commands

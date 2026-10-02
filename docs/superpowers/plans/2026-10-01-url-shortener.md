@@ -122,16 +122,16 @@ Expected: tabel tetap ada. Commit `feat: urls schema + migrate`.
 - Produces: `POST /api/urls -> 201 { shortCode, shortUrl }`, `GET /api/urls -> 200 [...]`
 - `export function isValidHttpUrl(s: string): boolean`, `export async function createShortUrl(originalUrl: string): Promise<Row>`
 
-- [ ] **Step 1: Tulis `isValidHttpUrl` + `createShortUrl` (nanoid 7 + retry 3x)**
+- [x] **Step 1: Tulis `isValidHttpUrl` + `createShortUrl` (nanoid 7 + retry 3x)**
 
 Run: `bun run dev` tidak error import
 Expected: compile OK.
 
-- [ ] **Step 2: Tulis `+server.ts` GET + POST**
+- [x] **Step 2: Tulis `+server.ts` GET + POST**
 
 POST: parse `{ url }`, validasi → 400 `{ error }` bila gagal, else 201 JSON. GET: select order desc.
 
-- [ ] **Step 3: Verifikasi via curl**
+- [x] **Step 3: Verifikasi via curl**
 
 Run: `curl -i -X POST localhost:5173/api/urls -H 'Content-Type: application/json' -d '{"url":"https://example.com/article/very-long-url"}'`
 Expected: `201` + `shortCode` 7 char.
@@ -142,7 +142,7 @@ Expected: list berisi row tadi.
 Run: `curl -i -X POST localhost:5173/api/urls -H 'Content-Type: application/json' -d '{"url":"notaurl"}'`
 Expected: `400` + pesan Indonesia jelas.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 `feat: api create + list urls`
 
