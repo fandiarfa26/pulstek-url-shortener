@@ -216,14 +216,14 @@ Buka di browser → harus landing ke URL asli.
 - Consumes: list dari Task 3
 - Produces: `DELETE /api/urls/:shortCode -> 200 { ok:true }` / `404`
 
-- [ ] **Step 1: Tulis DELETE handler + tombol di UI**
+- [x] **Step 1: Tulis DELETE handler + tombol di UI**
 
-- [ ] **Step 2: Verifikasi**
+- [x] **Step 2: Verifikasi**
 
 Klik delete di UI → row hilang. `curl -i localhost:5173/<codeYangDihapus>` → `404`.
 Expected: list konsisten setelah reload.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 `feat: delete short url`
 
