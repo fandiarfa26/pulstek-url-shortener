@@ -183,13 +183,13 @@ Expected: short URL muncul di list tanpa reload manual.
 - Consumes: `db` lookup `where eq(urlsTable.shortCode, params.shortCode)`
 - Produces: `302 Location: originalUrl` atau `404 "Short URL tidak ditemukan"`
 
-- [ ] **Step 1: Tulis handler redirect**
+- [x] **Step 1: Tulis handler redirect**
 
 ```ts
 // GET(src/routes/[shortCode]/+server.ts): redirect(302, row.originalUrl) atau error(404)
 ```
 
-- [ ] **Step 2: Verifikasi**
+- [x] **Step 2: Verifikasi**
 
 Run: `curl -i localhost:5173/<codeDariTask2>`
 Expected: `302` + `Location: https://example.com/...`
@@ -199,7 +199,7 @@ Expected: `404`.
 
 Buka di browser → harus landing ke URL asli.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 `feat: redirect shortCode`
 
